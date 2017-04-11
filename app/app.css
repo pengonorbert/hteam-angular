@@ -15,6 +15,7 @@ body {
 .angular_logo {
     display: inline-block;
     width: 100%;
+    margin: 25px 0px 25px;
 }
 h1 {
     display: inline-block;
@@ -34,7 +35,6 @@ h1 {
 }
 
 .nav_bar_fix {
-    margin-top: 25px;
     margin-bottom: 25px;
 }
 
