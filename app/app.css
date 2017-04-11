@@ -1,0 +1,47 @@
+/* app css stylesheet */
+
+body {
+    color: #2a2a2a;
+    background: #fafafa;
+}
+
+.container {
+    margin-top: 50px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 5px #e6e6e6;
+}
+.angular_logo {
+    display: inline-block;
+    width: 100%;
+}
+h1 {
+    display: inline-block;
+    margin: 0;
+    line-height: 68px;
+    font-size: 30px;
+    padding-left: 15px;
+}
+.angular_logo:before {
+    background-image: url(imgs/AngularJS.png);
+    width: 68px;
+    height: 68px;
+    margin-left: 15px;
+    background-size: contain;
+    content: "";
+    float: left;
+}
+
+.nav_bar_fix {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+#menubar_container {
+    display: inline-block;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+}
+
