@@ -30,9 +30,8 @@
         <angular-logo></angular-logo>
         <div class="col-md-12">
             <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
-                <md-nav-item name="page1" md-nav-href="/#/view1">Page One</md-nav-item>
-                <md-nav-item name="page2" md-nav-href="/#/view2">Page Two</md-nav-item>
-                <md-nav-item name="page3">Page Three</md-nav-item>
+                <md-nav-item name="beers" md-nav-href="/#/beers">Beers</md-nav-item>
+                <md-nav-item name="todos" md-nav-href="/#/todos">Todos</md-nav-item>
             </md-nav-bar>
         </div>
     </div>
@@ -53,10 +52,13 @@
 <script src="bower_components/angular-messages/angular-messages.js"></script>
 <script src="bower_components/angular-material/angular-material.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/restangular/dist/restangular.min.js"></script>
 <script src="app.js"></script>
-<script src="view1/view1.js"></script>
-<script src="view2/view2.js"></script>
-<script src="view/home/home.controller.js"></script>
+<script src="hteam-app.controller.js"></script>
+<script src="pages/beers/beers.controller.js"></script>
+<script src="pages/todos/todos.controller.js"></script>
+<script src="pages/home/home.controller.js"></script>
 <script src="components/version/version.js"></script>
 <script src="components/version/version-directive.js"></script>
 <script src="components/version/interpolate-filter.js"></script>

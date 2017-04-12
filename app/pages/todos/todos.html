@@ -1,0 +1,57 @@
+<h3>Create new todo:</h3>
+
+<div class="row">
+
+    <div class="col-md-5">
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>Thing to do is ...</label>
+            <input ng-model="todoModel.label">
+        </md-input-container>
+    </div>
+
+    <div class="col-md-5">
+        <md-input-container class="md-block" flex-gt-sm="">
+            <label>Priority</label>
+            <md-select ng-model="todoModel.priority">
+                <md-option ng-repeat="pri in priorities" value="{{pri.priority}}">
+                    {{pri.label}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+    </div>
+
+    <div class="col-md-2">
+        <md-button ng-click="addTodo(todoModel)" class="md-raised md-primary">Add</md-button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+
+
+        <md-list ng-cloak="">
+
+            <md-subheader class="md-no-sticky">Not done yet:</md-subheader>
+            <md-list-item ng-repeat="todo in todos">
+                <span class="todo-label"> {{ todo.label }}</span>
+                <span class="priority-label">{{ priorities[todo.priority - 1].label }}</span>
+                <md-checkbox class="md-secondary" ng-model="todo.done"></md-checkbox>
+            </md-list-item>
+
+            <md-divider></md-divider>
+
+            <md-subheader class="md-no-sticky">Already did:</md-subheader>
+            <md-list-item ng-repeat="dt in doneTodos" ng-disable="dt.done">
+                <span class="todo-label"> {{ dt.label }}</span>
+                <span class="priority-label">{{ priorities[dt.priority - 1].label }}</span>
+                <md-checkbox ng-disabled="dt.done" class="md-secondary" ng-model="dt.done"></md-checkbox>
+            </md-list-item>
+
+        </md-list>
+
+
+    </div>
+</div>
+
+
+

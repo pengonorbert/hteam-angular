@@ -1,0 +1,25 @@
+<h3>Beers! :)</h3>
+
+<p ng-hide="!listLoading"><md-progress-circular md-mode="indeterminate"></md-progress-circular></p>
+
+<div ng-if="!listLoading && beerList" class="beers-container">
+    <p>The following beers loaded trough the public <a href="https://punkapi.com">Punk API</a></p>
+
+     <div class="beer-card" ng-repeat="beer in beerList">
+         <md-card md-theme="default" md-theme-watch="">
+             <md-card-title>
+                 <md-card-title-text>
+                     <span class="md-headline">{{ beer.name }} ({{ beer.abv }}%)</span>
+                     <span class="md-subhead">{{ beer.description }}</span>
+                 </md-card-title-text>
+                 <md-card-title-media>
+                     <div class="md-media-lg card-media beer-card-image" style="background-image: url('{{ beer.image_url }}')"></div>
+                 </md-card-title-media>
+             </md-card-title>
+             <md-card-actions layout="row" layout-align="end center">
+                 <md-button ng-click="drinkBeer(beer.id)" l>Drink</md-button>
+             </md-card-actions>
+         </md-card>
+     </div>
+
+</div>
